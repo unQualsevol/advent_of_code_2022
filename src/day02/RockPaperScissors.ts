@@ -1,3 +1,5 @@
+import {Result, Solution} from "../types";
+
 const shapeValue:{[x:string]: number} = {
     X: 1,
     Y: 2,
@@ -44,26 +46,11 @@ function calculateResult2(game: string):number {
     return shapeValue2[players.join("")] + outcomeValues2[players[1]];
 }
 
-export function day02(input: string, part?: number) {
-    const totalScore = input
+export const day02: Solution = (input: string): Result =>  {
+    return input
         .split(/\r?\n/)
         .reduce((acc, line) => {
             if(!line) return acc;
             return {first: acc.first + calculateResult(line), second: acc.second + calculateResult2(line)};
         }, {first: 0, second: 0});
-    switch (part) {
-        case 1: {
-            console.log(`First exercise: ${totalScore.first}`);
-            break;
-        }
-        case 2: {
-            console.log(`Second exercise: ${totalScore.second}`);
-            break;
-        }
-        default:{
-            console.log(`First exercise: ${totalScore.first}`);
-            console.log(`Second exercise: ${totalScore.second}`);
-        }
-
-    }
 }

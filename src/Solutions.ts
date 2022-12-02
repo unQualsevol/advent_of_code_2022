@@ -1,4 +1,4 @@
-import {Solution} from "./Solution";
+import {Solution} from "./types";
 import {day01} from "./day01/CalorieCounting";
 import {day02} from "./day02/RockPaperScissors";
 
