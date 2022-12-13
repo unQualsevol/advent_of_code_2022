@@ -5,5 +5,5 @@ import {day03} from "./day03/RucksackReorganization";
 import {day04} from "./day04/CampCleanup";
 
 export function getSolutions(): Solution[] {
-    return [day01, day02, day03, day04]
+	return [day01, day02, day03, day04]
 }
