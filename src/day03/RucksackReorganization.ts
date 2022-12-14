@@ -19,16 +19,13 @@ function calculatePriority(item: string) {
 
 function first(lines: string[]): number {
 	return lines.reduce((acc, rucksack) => {
-		if (!rucksack) {
-			return acc;
-		}
 		return acc + calculatePriority(inBothCompartments(rucksack))
 	}, 0);
 }
 
 function second(lines: string[]): number {
 	let second = 0;
-	while (lines.length > 3) {
+	while (lines.length >= 3) {
 		const workingGroup = lines.splice(0, 3);
 		const match = [...workingGroup[0]].find((item) => workingGroup[1].includes(item) && workingGroup[2].includes(item)) ?? "";
 		second += calculatePriority(match);

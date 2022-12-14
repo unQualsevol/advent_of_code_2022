@@ -2,7 +2,7 @@ import {getSolutions} from "./Solutions";
 import * as fs from "fs";
 
 function getInputAsString(day: number) {
-	return fs.readFileSync(`resources/input${(day < 10) ? "0" + day : day}`).toString();
+	return fs.readFileSync(`resources/input${(day < 10) ? "0" + day : day}`).toString().trim();
 }
 
 export default (day: string, part?: string): void => {

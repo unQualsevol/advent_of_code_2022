@@ -50,7 +50,6 @@ export const day02: Solution = (input: string): Result => {
 	return input
 		.split(/\r?\n/)
 		.reduce((acc, line) => {
-			if (!line) return acc;
 			return {first: acc.first + calculateResult(line), second: acc.second + calculateResult2(line)};
 		}, {first: 0, second: 0});
 }
