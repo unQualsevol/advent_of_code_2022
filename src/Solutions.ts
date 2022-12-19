@@ -9,7 +9,11 @@ import {day07} from "./day07/NoSpaceLeftOnDevice";
 import {day08} from "./day08/TreetopTreeHouse";
 import {day09} from "./day09/RopeBridge";
 import {day10} from "./day10/CathodeRayTube";
+import {day11} from "./day11/MonkeyInTheMiddle";
 
 export function getSolutions(): Solution[] {
-	return [day01, day02, day03, day04, day05, day06, day07, day08, day09, day10];
+	return [
+		day01, day02, day03, day04, day05,
+		day06, day07, day08, day09, day10,
+		day11];
 }
